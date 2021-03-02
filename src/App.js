@@ -5,6 +5,8 @@ import MyHeader from "./components/Header"
 
 import Name from "./components/Name"
 import AppName from "./components/AppName";
+import MovieName from "./components/MovieName";
+
 
 function App() {
   const [appName, setAppName] = useState();
@@ -20,6 +22,9 @@ function App() {
       <Name />
       <h1> Name of App {appName}</h1>
       <AppName  onAppNameChange={onAppNameChange} appName={appName} />
+      <div>
+        <MovieName appName={appName}/>
+      </div>
     </div>
   );
 }
